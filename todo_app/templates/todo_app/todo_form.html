@@ -1,0 +1,23 @@
+{% extends 'todo_app/todo_base.html' %}
+
+{% block body_block %}
+<br>
+<div class="jumbotron">
+<h1>Edit your Task : </h1>
+
+<h3>
+{% if not form.instance.pk %}
+Create Task
+{% else %}
+Update Task
+{% endif %}
+</h3>
+<form method="POST">
+    {% csrf_token %}
+     <br>
+    {{form.as_p}}
+     <br>
+    <input class="btn btn-primary" type="submit" value="Create">
+</form>
+</div>
+{% endblock %}

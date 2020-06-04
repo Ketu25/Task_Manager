@@ -1,0 +1,21 @@
+{% extends 'todo_app/todo_base.html' %}
+
+{% block body_block %}
+<br>
+<div class="jumbotron">
+
+<h1>ToDo List :</h1><br>
+    <h3>
+     <ol>
+
+    {% for todo in todolist %}
+
+        <li><a href="{{todo.id}}">{{todo.items}}</li><br>
+
+    {% endfor %}
+
+    </ol>
+
+    </h3>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+
+<div class="container" style="text-align:center;font-size:40px;font-style:italic;font-family:cursive;color:#357ec7;margin-top:50px">
+<div class="jumbotron">
+    <p>Welcome To Todo Web App!!!</p>
+    <p>Never Procrastinate.</p>
+</div>
+     <a class="btn btn-success btn-lg" href="{% url 'todo_app:list' %}">Todo's</a>
+</div>
+
+{% endblock %}

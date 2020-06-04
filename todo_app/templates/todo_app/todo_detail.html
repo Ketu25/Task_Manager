@@ -1,0 +1,15 @@
+{% extends 'todo_app/todo_base.html' %}
+
+{% block body_block %}
+<br>
+<div class="jumbotron">
+<h1>Todo List Task : </h1><br>
+<p>Task : {{tododetail.items}}</p>
+</div>
+
+ <div class="container">
+    <a class="btn btn-success" href="{% url 'todo_app:delete' pk=tododetail.pk %}">Task Completed</a>
+    <a class="btn btn-primary" href="{% url 'todo_app:update' pk=tododetail.pk %}">Edit</a>
+ </div>
+
+{% endblock %}
